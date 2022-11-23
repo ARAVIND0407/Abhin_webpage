@@ -240,12 +240,14 @@ html{
 #btn{
     width: 40%;
     margin-left: 11rem;
-    background: #fff;
+    background: linear-gradient(to right,#fff 50%,#ff004f 50%);
+    background-size: 205%;
+    background-position: left;
     color: #000;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 #btn:hover{
-    background-color: #ff004f;
+    background-position: right;
     color: #fff;
 }
 @media only screen and (max-width:600px){
