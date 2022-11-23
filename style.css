@@ -66,8 +66,9 @@ body{
 @media only screen and (max-width:600px){
     .titlebar{
         padding: 0;
-        margin: 0;
-        background: #000;
+        margin: 5px 0;
+        background: rgba(0, 0, 0, 0.11);
+        backdrop-filter: blur(20px);
     }
     .titlebar nav ul li {
         font-size: 0.7rem;
@@ -242,12 +243,17 @@ body{
     letter-spacing: 2px;
 }
 .right input:focus{
-    border-bottom: 2px solid #ff004f;
+    animation: colorchange 0.5s linear infinite alternate;
 }
+@keyframes colorchange{
+    0%{ border: 2px solid #ffffff; }
+    100%{ border: 2px solid #ff0000; }   
+}
+
 #btn{
     width: 40%;
     margin-left: 11.5rem;
-    background: linear-gradient(to right,#fff 50%,#ff004f 50%);
+    background: linear-gradient(to right,#fff 50%,#58001c 5%,#ad0000);
     background-size: 205%;
     background-position: left;
     color: #000;
