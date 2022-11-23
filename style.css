@@ -7,11 +7,16 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    background: #000;
+}
 
 .container {
     width: 100%;
     height: fit-content;
-    background: linear-gradient(225deg,#ff004f 5%,#000);
+    background: linear-gradient(225deg,#64002aa8,rgb(0, 0, 0)),url(Images/background.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /* ---------title */
@@ -81,7 +86,7 @@ html{
 
 .imageHolder {
     flex-basis: 30%;
-    height: 40rem;
+    height: 38rem;
     margin: 1rem auto;
     border-radius: 10px;
     overflow: hidden;
@@ -94,7 +99,7 @@ html{
     transition: 2s;
 }
 .imageHolder img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 .about {
@@ -147,7 +152,8 @@ html{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
 }
 
 .left {
@@ -224,11 +230,12 @@ html{
 }
 .right input{
     width: 100%;
+    border: 0;
     height: 2.5rem;
     margin: 1rem auto;
     padding: 0 1rem;
     outline: none;
-    background: rgb(112, 112, 112);
+    background: rgba(255, 255, 255, 0.315);
     border-radius: 5px;
     color: #fff;
     font-size: 1.05rem;
@@ -239,7 +246,7 @@ html{
 }
 #btn{
     width: 40%;
-    margin-left: 11rem;
+    margin-left: 11.5rem;
     background: linear-gradient(to right,#fff 50%,#ff004f 50%);
     background-size: 205%;
     background-position: left;
