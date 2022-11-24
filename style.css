@@ -4,17 +4,19 @@
     box-sizing: border-box;
     font-family: poppins;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background: #000;
 }
 
 .container {
     width: 100%;
     height: fit-content;
-    background: linear-gradient(225deg,#64002aa8,rgb(0, 0, 0)),url(Images/background.jpg);
+    background: linear-gradient(225deg, #64002aa8, rgb(0, 0, 0)), url(Images/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -63,18 +65,20 @@ body{
     width: 100%;
 }
 
-@media only screen and (max-width:600px){
-    .titlebar{
+@media only screen and (max-width:600px) {
+    .titlebar {
         padding: 0;
         margin: 5px 0;
         background: rgba(0, 0, 0, 0.11);
         backdrop-filter: blur(20px);
     }
+
     .titlebar nav ul li {
         font-size: 0.7rem;
     }
 
 }
+
 /* ---------about */
 
 #home {
@@ -99,7 +103,8 @@ body{
     object-fit: cover;
     transition: 2s;
 }
-.imageHolder img:hover{
+
+.imageHolder img:hover {
     transform: scale(1.1);
 }
 
@@ -124,27 +129,32 @@ body{
 .about h1:hover {
     letter-spacing: 5px;
 }
-.about p{
+
+.about p {
     font-size: 1.5rem;
     color: #fff;
     text-align: justify;
     width: 75%;
 }
-@media only screen and (max-width:600px){
-    .imageHolder{
+
+@media only screen and (max-width:600px) {
+    .imageHolder {
         flex-basis: 100%;
         margin: 0;
         border-radius: 0;
     }
-    .about{
+
+    .about {
         flex-basis: 100%;
-        padding: 0.5rem 1rem;   
+        padding: 0.5rem 1rem;
     }
-    .about p{
+
+    .about p {
         width: auto;
         font-size: 1rem;
     }
 }
+
 /* -------------contact */
 
 #contact {
@@ -206,16 +216,20 @@ body{
     transform: scale(1.1);
     color: #fff;
 }
-.left .fa-brands.fa-facebook:hover::after{
+
+.left .fa-brands.fa-facebook:hover::after {
     background-color: #16A5F3;
 }
-.left .fa-brands.fa-instagram:hover::after{
+
+.left .fa-brands.fa-instagram:hover::after {
     background-color: #e14166;
 }
-.left .fa-brands.fa-telegram:hover::after{
+
+.left .fa-brands.fa-telegram:hover::after {
     background-color: #28a1e0;
 }
-.left .fa-brands.fa-whatsapp:hover::after{
+
+.left .fa-brands.fa-whatsapp:hover::after {
     background-color: #48c757;
 }
 
@@ -225,11 +239,13 @@ body{
     flex-wrap: wrap;
     padding: 0 10rem;
 }
-::placeholder{
+
+::placeholder {
     color: #ff004f;
     font-size: 1.12rem;
 }
-.right input{
+
+.right input {
     width: 100%;
     border: 0;
     height: 2.5rem;
@@ -242,57 +258,132 @@ body{
     font-size: 1.05rem;
     letter-spacing: 2px;
 }
-.right input:focus{
+
+.right input:focus {
     animation: colorchange 0.5s linear infinite alternate;
 }
-@keyframes colorchange{
-    0%{ border: 2px solid #ffffff; }
-    100%{ border: 2px solid #ff0000; }   
+
+@keyframes colorchange {
+    0% {
+        border: 2px solid #ffffff;
+    }
+
+    100% {
+        border: 2px solid #ff0000;
+    }
 }
 
-#btn{
+#btn {
+    height: 30px;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
     width: 40%;
     margin-left: 11.5rem;
-    background: linear-gradient(to right,#fff 50%,#58001c 5%,#ad0000);
+    background: linear-gradient(to right, #fff 50%, #58001c 5%, #ad0000);
     background-size: 205%;
     background-position: left;
     color: #000;
     transition: 0.2s;
 }
-#btn:hover{
+
+#btn:hover {
     background-position: right;
     color: #fff;
 }
-@media only screen and (max-width:600px){
-    .left{
+
+#popup {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    text-align: center;
+    visibility: hidden;
+}
+
+.openpopup {
+    animation: showcntnt 3s linear forwards;
+}
+
+@keyframes showcntnt {
+    0% {
+        visibility: hidden;
+    }
+
+    10% {
+        visibility: hidden;
+    }
+    15% {
+        visibility: visible;
+    }
+    95% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+#popup i {
+    color: transparent;
+    font-size: 8rem;
+    margin: 4rem auto;
+    animation: colchange 2s ease-in forwards;
+}
+
+@keyframes colchange {
+    100% {
+        color: #00ff00;
+    }
+}
+
+#popup p {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width:600px) {
+    .left {
         flex-basis: 100%;
         align-items: center;
         padding-top: 2rem;
         padding-bottom: 1rem;
         margin: 0;
     }
-    .left a{
+
+    .left a {
         width: fit-content;
         height: fit-content;
         margin: 0;
     }
-    .left .fa-brands.fa-facebook{
+
+    .left .fa-brands.fa-facebook {
         margin: 0 3rem 0 0;
     }
-    .left .fa-brands.fa-instagram{
+
+    .left .fa-brands.fa-instagram {
         margin: 0 3rem 0 0;
     }
-    .left .fa-brands.fa-telegram{
+
+    .left .fa-brands.fa-telegram {
         margin: 0 3rem 0 0;
     }
-    .left .fa-brands.fa-whatsapp{
+
+    .left .fa-brands.fa-whatsapp {
         margin: 0 3rem 0 0;
     }
-    .right{
+
+    .right {
         flex-basis: 100%;
         padding: 0 1rem;
     }
-    #btn{
+
+    #btn {
         margin: 0 18%;
         font-size: 1rem;
         width: 15rem;
@@ -300,21 +391,24 @@ body{
     }
 
 }
+
 /* ----------footer */
-.footer{
+.footer {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #000;
 }
-.footer p{
+
+.footer p {
     font-size: 0.8rem;
     letter-spacing: 3px;
     color: #fff;
     cursor: default;
     pointer-events: none;
 }
-.footer p span{
+
+.footer p span {
     color: #ff004f;
 }
