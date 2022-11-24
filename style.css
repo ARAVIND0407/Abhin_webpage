@@ -172,8 +172,12 @@ body {
     padding: 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-
+.left a{
+    height: fit-content;
+    width: fit-content;
+}
 .left .fa-brands {
     font-size: 3rem;
     margin: 0 5rem;
@@ -411,4 +415,17 @@ body {
 
 .footer p span {
     color: #ff004f;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+::-webkit-scrollbar-track{
+    background: #000;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ff0000;
 }
